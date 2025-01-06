@@ -1,0 +1,360 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background image for the whole page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Background specific to the HOME page */
+body.HOME {
+    background: url(aset/bg.jpg) no-repeat center center fixed;
+    background-size: cover; /* Make background cover the whole page */
+}
+
+/* Navbar Styling */
+header {
+    background-color: #3c9e66;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #3c9e66;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Container for Sections */
+.container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Section Styling */
+.section {
+    padding: 30px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Background Colors for Each Section */
+.healthy-living {
+    background-color: #62b883;
+}
+
+.nutritious-foods {
+    background-color: #3f8e47;
+}
+
+.regular-exercise {
+    background-color: #6ba659;
+}
+
+.sufficient-rest {
+    background-color: #539e6e;
+}
+
+/* Section Heading Styling */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Read More Button Styling */
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3c9e66;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more-btn:hover {
+    background-color: #356b4d;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    background-color: #333;
+    color: white;
+    text-align: right;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    width: 48px;
+    height: auto;
+    padding-right: 10px;
+}
+
+/* explore Section Styling */
+.explore-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.explore-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f4f4f9;
+}
+
+/* Grid untuk produk */
+.explore-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.explore-container a{
+    text-decoration: none;
+}
+
+/* Style masing-masing produk */
+.explore {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.explore img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.explore h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.explore p {
+    font-size: 14px;
+    color: #555;
+}
+
+.explore:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Responsive: Menyesuaikan produk jika layar lebih kecil */
+@media (max-width: 900px) {
+    .explore-container {
+        grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom di layar kecil */
+    }
+}
+
+@media (max-width: 600px) {
+    .explore-container {
+        grid-template-columns: repeat(1, 1fr); /* Menjadi 1 kolom di layar kecil */
+    }
+}
+
+/* Efek Hover Read More agar mirip Produk */
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3c9e66;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out; /* Animasi efek hover */
+}
+
+/* Efek saat cursor berada di atas tombol */
+.read-more-btn:hover {
+    background-color: #356b4d; /* Warna lebih gelap */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transform: translateY(-3px); /* Efek naik sedikit */
+}
+
+/* Container untuk tips */
+.tips-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+/* Bagian masing-masing tip */
+.tip-item {
+    margin-bottom: 20px;
+}
+
+/* Menyusun judul, deskripsi singkat, dan penjelasan dalam satu kolom */
+.tip-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.tip-content h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.tip-content p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* Penjelasan lebih lanjut */
+.tip-description {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Responsif pada perangkat lebih kecil */
+@media (max-width: 768px) {
+    .tips-container {
+        flex-direction: column;
+    }
+}
+
+.back-btn {
+    text-align: center;
+    margin-top: 40px; /* Menambahkan jarak lebih besar dari konten */
+    margin-bottom: 20px; /* Memberikan sedikit ruang di bawah tombol */
+}
+
+.back-link {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-link:hover {
+    background-color: #45a049;
+}
+
+/* Untuk memastikan elemen tidak keluar dari kolom */
+.tip-description {
+    overflow: hidden; /* Menyembunyikan elemen yang keluar dari kolom */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+ol {
+    padding-left: 20px; /* Memberikan ruang di sebelah kiri untuk daftar */
+    list-style-position: inside; /* Membuat angka berada di dalam kolom */
+}
+
+.tip-item {
+    max-width: 100%; /* Pastikan kolom tidak terlalu lebar */
+    box-sizing: border-box;
+}
+
+
+/* Menyesuaikan gambar agar responsif, memiliki sudut melengkung, dan memberikan jarak di atasnya */
+.tip-icon {
+    width: 30%;  /* Gambar menyesuaikan lebar container */
+    height: auto; /* Menjaga rasio gambar */
+    border-radius: 15px;  /* Membuat sudut gambar melengkung */
+    object-fit: cover;  /* Memastikan gambar menutupi area tanpa terdistorsi */
+    margin-top: 20px;  /* Memberikan jarak 20px di atas gambar */
+    margin-bottom: 20px;
+}
+
+/* Bagian untuk Container dari Tips (A B C D) */
+.bahaya-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada desktop */
+    gap: 20px; /* Jarak antar kolom */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px; /* Menambahkan padding kiri dan kanan */
+}
+
+
+
+/* Media Query untuk tampilan smartphone */
+@media (max-width: 768px) {
+    .bahaya-layout {
+        grid-template-columns: 1fr; /* 1 kolom pada perangkat mobile */
+    }
+}
+
+/* Gaya umum untuk setiap elemen dalam bahaya-layout */
+.tip-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk gambar dalam tiap elemen */
+.tip-icon {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
